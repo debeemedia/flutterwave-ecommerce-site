@@ -51,3 +51,293 @@ table {
 
 
 /* Write your css below here */
+* {
+	box-sizing: border-box;
+	/* font-family: Lato, sans-serif; */
+
+}
+
+.site-wrapper {
+	font-family: Lato, sans-serif;
+	color: #333333;
+	padding: 0 15px;
+	line-height: 1.4;
+	width: 100%;
+	margin: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+/***** NAV *****/
+
+nav {
+	/* background-color: red; */
+	/* height: 100px; */
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+
+nav a {
+	color: #333333;
+}
+
+.logo {
+	background-color: #dadef5;
+	height: 40px;
+	width: 40px;
+	font-size: 14px;
+	border-radius: 50%;
+	display: inline;
+	padding: 10px;
+	color: #0f1c70;
+}
+
+.rating-digit {
+	color: #925e07;
+	font-weight: bold;
+}
+
+.cart-icon {
+	stroke: #333333;
+	stroke-width: 2.5;
+}
+
+.cart-icon:hover {
+	stroke: #ff9b00;
+}
+
+.cart-text,
+.set-up-text {
+	display: none;
+}
+
+/***** SEARCH-BAR *****/
+
+.search-bar {
+	/* background-color: green; */
+	/* height: 100px; */
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+input {
+	padding: 5px 10px;
+}
+
+select {
+	padding: 10px;
+}
+
+/***** SHOWCASE *****/
+
+.showcase {
+	/* background-color: blue; */
+	/* height: 100px; */
+	display: grid;
+	grid-template-columns: repeat(12, auto);
+	/* grid-template-rows: repeat(10, auto); */
+	column-gap: 15px;
+	row-gap: 35px;
+}
+
+.card {
+	/* border: 1px solid red; */
+	/* height: 100px; */
+}
+
+.card-primary {
+	grid-column: span 12;
+	/* grid-row: span 1; */
+}
+
+.card-secondary {
+	grid-column: span 6;
+	/* grid-row: span 1; */
+}
+
+.card-image {
+	width: 100%;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.card-primary .card-image {
+	/* background-color: green; */
+	/* height: 70%; */
+	height: 350px;
+}
+
+.card-secondary .card-image {
+	height: 180px;
+}
+
+.card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.3s;
+}
+
+.card-image img:hover {
+	transform: scale(1.1);
+}
+
+.card-details {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0 0;
+}
+
+.card-description {
+	margin: 0 0 10px;
+}
+
+.card-title,
+.card-title a {
+	color: #828282;
+}
+
+.card-primary .card-title {
+	font-size: 18px;
+	margin: 0 0 11px;
+}
+
+.card-primary .card-price {
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+}
+
+.card-primary .card-price span:nth-of-type(2) {
+	font-size: 13px;
+	color: #828282;
+	text-decoration: line-through;
+	margin: 0 0 0 20px;
+}
+
+.card-secondary .card-title {
+	font-size: 16px;
+	margin: 0 0 6px;
+}
+
+.card-secondary .card-price {
+	font-size: 14px;
+	color: #4f4f4f;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-secondary .card-price span:nth-of-type(2) {
+	font-size: 13px;
+	color: #828282;
+	text-decoration: line-through;
+}
+
+.card-cta {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.card-cta button {
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+.card-cta span {
+	font-size: 14px;
+	/* font-family: Lato, sans-serif; */
+
+}
+
+/***** REVIEWS *****/
+
+.reviews {
+	margin-top: 60px;
+    border-top: 1px solid #E0E0E0;
+    padding-top: 80px;
+    /* min-height: 400px; */
+    /* font-size: 16px; */
+    line-height: 24px;
+    color: #4F4F4F;
+}
+
+.reviews-body {
+	display: flex;
+	flex-direction: column;
+}
+
+.star-group {
+	display: flex;
+}
+
+.progress-bar {
+	width: 166px;
+	height: 4px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	margin: 0 12px;
+}
+
+/***** FOOTER *****/
+
+footer {
+	/* background-color: yellow; */
+	height: 100px;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media screen and (width >= 576px) {
+	.site-wrapper {
+		width: 80%;
+		margin: auto;
+	}
+}
+
+@media screen and (width >= 600px) {
+	.card-details {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (width >= 800px) {
+	.card-primary {
+		grid-column: span 6;
+	}
+	
+	.card-secondary {
+		grid-column: span 4;
+	}
+
+	.card-primary .card-image {
+		height: 500px;
+	}
+
+	.card-secondary .card-image {
+		height: 250px;
+	}
+}
+
+@media screen and (width >= 1200px) {
+	.site-wrapper {
+		max-width: 1200px;
+	}
+
+	.card-secondary {
+		grid-column: span 3;
+	}
+}
