@@ -23,11 +23,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {
-	line-height: 1;
-	width: 100%;
-}
-
 ol, ul {
 	list-style: none;
 }
@@ -53,21 +48,18 @@ table {
 /* Write your css below here */
 * {
 	box-sizing: border-box;
-	/* font-family: Lato, sans-serif; */
 }
 
 html {
 	font-size: 16px;
 }
 
-.site-wrapper {
+body {
+	width: 100%;
 	font-family: Lato, sans-serif;
 	background-color: #fff;
 	color: #333333;
-	padding: 30px 15px 15px;
 	line-height: 1.4;
-	width: 100%;
-	margin: auto;
 }
 
 a {
@@ -87,11 +79,8 @@ a {
 }
 
 nav {
-	/* background-color: red; */
-	/* height: 100px; */
 	display: flex;
 	justify-content: space-between;
-	/* z-index: 1; */
 	font-size: 16px;
 }
 
@@ -160,7 +149,6 @@ nav a {
 	font-weight: bold;
 	border-right: 1px solid #bdbdbd;
 	padding: 5px 25px 5px 5px;
-	/* margin-right: 25px; */
 }
 
 .cart-icon {
@@ -180,6 +168,12 @@ nav a {
 }
 
 /***** SEARCH-BAR *****/
+
+.main-wrapper {
+	padding: 30px 15px 15px;
+	width: 100%;
+	margin: auto;
+}
 
 .search-bar {
 	margin-bottom: 30px;
@@ -236,7 +230,6 @@ select {
 	background: none;
 	border: none;
 	outline: none;
-	/* padding: 10px; */
 	width: 100%;
 	height: 100%;
 	font-size: 15px;
@@ -249,18 +242,11 @@ select {
 /***** SHOWCASE *****/
 
 .showcase {
-	/* background-color: blue; */
-	/* height: 100px; */
 	display: grid;
 	grid-template-columns: repeat(12, auto);
 	/* grid-template-rows: repeat(10, auto); */
 	column-gap: 15px;
 	row-gap: 35px;
-}
-
-.card {
-	/* border: 1px solid red; */
-	/* height: 100px; */
 }
 
 .card-primary {
@@ -280,8 +266,6 @@ select {
 }
 
 .card-primary .card-image {
-	/* background-color: green; */
-	/* height: 70%; */
 	height: 350px;
 }
 
@@ -367,8 +351,6 @@ select {
 
 .card-cta span {
 	font-size: 14px;
-	/* font-family: Lato, sans-serif; */
-
 }
 
 /***** REVIEWS *****/
@@ -377,7 +359,6 @@ select {
 	margin-top: 60px;
     border-top: 1px solid #E0E0E0;
     padding-top: 80px;
-    /* min-height: 400px; */
     font-size: 16px;
     line-height: 24px;
     color: #4F4F4F;
@@ -544,7 +525,7 @@ footer {
 
 @media screen and (width >= 576px) {
 	nav,
-	.site-wrapper,
+	.main-wrapper,
 	footer {
 		width: 85%;
 		margin: auto;
@@ -616,14 +597,13 @@ footer {
 @media screen and (width > 1000px) {
 	footer {
 		flex-direction: row;
-		/* justify-content: space-between; */
 		gap: 470px;
 	}
 }
 
 @media screen and (width >= 1200px) {
 	nav,
-	.site-wrapper,
+	.main-wrapper,
 	footer {
 		max-width: 1200px;
 	}
